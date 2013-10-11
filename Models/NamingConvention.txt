@@ -1,3 +1,8 @@
 The file naming structure for models:
 
-Blah blah blah
+
+
+The file naming structure for textures:
+
+
+Needs to include whether it's a color map, normal map, spectular map, etc.
