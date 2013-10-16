@@ -1,6 +1,6 @@
 The file naming structure for models:
 
-m_"name of room"_"name of object"_"state of completion"
+m_"name of room"_"name of object"_"state of completion + 2 digit version number"
 
 replace anything in quotes with the appropriate selection below:
 
@@ -24,7 +24,7 @@ f = model and UVs completely finished, will not be updated
 
 The file naming structure for textures:
 
-t_"name of room"_"name of object"_"type of map"_"state of completion"
+t_"name of room"_"name of object"_"type of map"_"state of completion + 2 digit version number"
 
 type of map:
 d = diffuse
