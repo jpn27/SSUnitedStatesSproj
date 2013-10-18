@@ -1,6 +1,6 @@
 The file naming structure for models:
 
-m_"name of room"_"name of object"_"state of completion + 2 digit version number"
+m_"name of room"_"name of object"_"level of detail"_"state of completion + 2 digit version number"
 
 replace anything in quotes with the appropriate selection below:
 
@@ -15,6 +15,11 @@ prom
 bridge
 print
 exterior
+
+levels of detail:
+high
+medium (if we have medium)
+low
 
 states of completion:
 p = placeholder geometry
