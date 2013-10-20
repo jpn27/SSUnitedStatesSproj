@@ -1,0 +1,6 @@
+Successful:
+->Added first-person controller
+->Established file structure
+
+Unsuccessful:
+->Limit camera resolution to iPad resolution
