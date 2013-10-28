@@ -54,4 +54,8 @@
 
 File Naming Structure for Code:
 
-****Will be added
+-->"SSUSBuild**.**.**-'XX''Month''XXXX'.extention"; Ex: SSUSBuild1.0.5-14Nov2013.unity3d
+   -->**.**.** is build version; Ex: 3.1.5, 3.1.14
+   -->XX is date; ex: 14, 5
+   -->Month is month in abbreviated form; Ex: Oct, Nov, Apr
+   -->XXXX is year; Ex: 2013, 2014
