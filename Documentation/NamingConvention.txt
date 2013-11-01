@@ -29,6 +29,20 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+->File Naming Structure for UVs:
+
+ -->uv_"name of room"_"name of object"_"###"_"state of completion"
+
+    -->###:
+       --> 3 digit number for objects that have multiple texture maps
+
+    -->states of completion:
+       -->p = placeholder UV
+       -->r = in the process of UVing, will be revised
+       -->f = UV completely finished, will not be updated
+
+---------------------------------------------------------------------------------------------------------------------------------
+
 ->File Naming Structure for Textures:
 
  -->t_"name of room"_"name of object"_"type of map"_"state of completion"
