@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: m_duck_bathtub_high_r.ma
-//Last modified: Sun, Nov 03, 2013 08:22:16 PM
+//Last modified: Fri, Nov 08, 2013 11:16:42 PM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -80,28 +80,27 @@ requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeT
 		 -nodeType "mib_data_get_shader_int" -nodeType "mib_data_get_shader_scalar" -nodeType "mib_data_get_shader_vector"
 		 -nodeType "mib_data_get_shader_color" -nodeType "user_ibl_env" -nodeType "user_ibl_rect"
 		 -nodeType "mia_material_x_passes" -nodeType "mi_metallic_paint_x_passes" -nodeType "mi_car_paint_phen_x_passes"
-		 -nodeType "misss_fast_shader_x_passes" -dataType "byteArray" "Mayatomr" "2014.0 - 3.11.1.9 ";
+		 -nodeType "misss_fast_shader_x_passes" -dataType "byteArray" "Mayatomr" "2014.0 - 3.11.1.4 ";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2014";
-fileInfo "version" "2014";
-fileInfo "cutIdentifier" "201307170459-880822";
-fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "version" "2014 x64";
+fileInfo "cutIdentifier" "201303010241-864206";
+fileInfo "osv" "Microsoft Windows 7 Ultimate Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.221415057289404 35.120783830250453 -45.148983523955025 ;
-	setAttr ".r" -type "double3" -31.538352729581252 166.19999999998379 0 ;
+	setAttr ".t" -type "double3" -9.6291656129337397 18.66421089192416 -61.831188383375739 ;
+	setAttr ".r" -type "double3" -9.9383527265448333 -168.19999999966524 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
-	setAttr ".ovr" 1.3;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 48.204121826174926;
+	setAttr ".fl" 34.999999999999986;
+	setAttr ".coi" 71.42864544208706;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" -0.030789554119110107 17.030191421508789 10.933167457580566 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".dr" yes;
 createNode transform -s -n "top";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 100.1 0 ;
@@ -131,22 +130,22 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 100.1 5.6546071875040704 14.212456625644501 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 6.6652031967493439;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "bathtub:polySurface1";
-createNode transform -n "transform5" -p "bathtub:polySurface1";
+createNode transform -n "m_duck_bathtub_high_r:bathtub:polySurface1";
+createNode transform -n "m_duck_bathtub_high_r:transform5" -p "m_duck_bathtub_high_r:bathtub:polySurface1";
 	setAttr ".v" no;
-createNode mesh -n "bathtub:polySurface1Shape" -p "transform5";
+createNode mesh -n "m_duck_bathtub_high_r:bathtub:polySurface1Shape" -p "m_duck_bathtub_high_r:transform5";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:53]";
@@ -372,10 +371,10 @@ createNode mesh -n "bathtub:polySurface1Shape" -p "transform5";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bathtub:pCylinder1";
-createNode transform -n "transform4" -p "bathtub:pCylinder1";
+createNode transform -n "m_duck_bathtub_high_r:bathtub:pCylinder1";
+createNode transform -n "m_duck_bathtub_high_r:transform4" -p "m_duck_bathtub_high_r:bathtub:pCylinder1";
 	setAttr ".v" no;
-createNode mesh -n "bathtub:pCylinder1Shape" -p "transform4";
+createNode mesh -n "m_duck_bathtub_high_r:bathtub:pCylinder1Shape" -p "m_duck_bathtub_high_r:transform4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:143]";
@@ -965,10 +964,10 @@ createNode mesh -n "bathtub:pCylinder1Shape" -p "transform4";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bathtub:polySurface2";
-createNode transform -n "transform3" -p "bathtub:polySurface2";
+createNode transform -n "m_duck_bathtub_high_r:bathtub:polySurface2";
+createNode transform -n "m_duck_bathtub_high_r:transform3" -p "m_duck_bathtub_high_r:bathtub:polySurface2";
 	setAttr ".v" no;
-createNode mesh -n "bathtub:polySurface2Shape" -p "transform3";
+createNode mesh -n "m_duck_bathtub_high_r:bathtub:polySurface2Shape" -p "m_duck_bathtub_high_r:transform3";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:91]";
@@ -1369,10 +1368,10 @@ createNode mesh -n "bathtub:polySurface2Shape" -p "transform3";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bathtub:pCylinder3";
-createNode transform -n "transform2" -p "bathtub:pCylinder3";
+createNode transform -n "m_duck_bathtub_high_r:bathtub:pCylinder3";
+createNode transform -n "m_duck_bathtub_high_r:transform2" -p "m_duck_bathtub_high_r:bathtub:pCylinder3";
 	setAttr ".v" no;
-createNode mesh -n "bathtub:pCylinder3Shape" -p "transform2";
+createNode mesh -n "m_duck_bathtub_high_r:bathtub:pCylinder3Shape" -p "m_duck_bathtub_high_r:transform2";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:143]";
@@ -1964,10 +1963,10 @@ createNode mesh -n "bathtub:pCylinder3Shape" -p "transform2";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "bathtub:polySurface5";
-createNode transform -n "transform1" -p "bathtub:polySurface5";
+createNode transform -n "m_duck_bathtub_high_r:bathtub:polySurface5";
+createNode transform -n "m_duck_bathtub_high_r:transform1" -p "m_duck_bathtub_high_r:bathtub:polySurface5";
 	setAttr ".v" no;
-createNode mesh -n "bathtub:polySurface5Shape" -p "transform1";
+createNode mesh -n "m_duck_bathtub_high_r:bathtub:polySurface5Shape" -p "m_duck_bathtub_high_r:transform1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:343]";
@@ -3424,11 +3423,13 @@ createNode mesh -n "bathtub:polySurface5Shape" -p "transform1";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface1";
+createNode transform -n "m_duck_bathtub_high_r:polySurface1";
 	setAttr ".rp" -type "double3" 0.38854265213012695 9.2199015279766172 0.16184186935424805 ;
 	setAttr ".sp" -type "double3" 0.38854265213012695 9.2199015279766172 0.16184186935424805 ;
-createNode mesh -n "polySurfaceShape1" -p "polySurface1";
+createNode transform -n "m_duck_bathtub_high_r:polySurface2" -p "m_duck_bathtub_high_r:polySurface1";
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape2" -p "m_duck_bathtub_high_r:polySurface2";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3436,32 +3437,434 @@ createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "spotLight1";
+createNode transform -n "m_duck_bathtub_high_r:polySurface3" -p "m_duck_bathtub_high_r:polySurface1";
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape3" -p "m_duck_bathtub_high_r:polySurface3";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "m_duck_bathtub_high_r:polySurface4" -p "m_duck_bathtub_high_r:polySurface1";
+	setAttr ".t" -type "double3" 0 0 0.0094074851047967201 ;
+	setAttr ".rp" -type "double3" -0.013411998748779297 5.7275309562683105 10.869590282440186 ;
+	setAttr ".sp" -type "double3" -0.013411998748779297 5.7275309562683105 10.869590282440186 ;
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape4" -p "m_duck_bathtub_high_r:polySurface4";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 322 ".pt";
+	setAttr ".pt[8]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[9]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[10]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[11]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[12]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[13]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[14]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[15]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[57]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[58]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[59]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[60]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[61]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[62]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[63]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[64]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[65]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[66]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[67]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[68]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[69]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[70]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[71]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[72]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[73]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[74]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[75]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[76]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[77]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[78]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[79]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[80]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[81]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[82]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[83]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[84]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[85]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[86]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[87]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[88]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[89]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[90]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[91]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[92]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[93]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[94]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[95]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[96]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[97]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[130]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[131]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[132]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[133]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[134]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[135]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[136]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[137]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[138]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[139]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[140]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[141]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[142]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[143]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[144]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[145]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[146]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[147]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[148]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[149]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[150]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[151]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[152]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[153]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[154]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[155]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[156]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[157]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[158]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[159]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[161]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[162]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[163]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[165]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[166]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[167]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[168]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[169]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[170]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[171]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[172]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[173]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[174]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[175]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[176]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[177]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[178]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[179]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[180]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[182]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[183]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[184]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[186]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[187]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[189]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[192]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[193]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[195]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[284]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[285]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[286]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[287]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[288]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[289]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[290]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[291]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[292]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[293]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[294]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[295]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[296]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[297]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[298]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[299]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[300]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[301]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[302]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[303]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[304]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[305]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[306]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[307]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[308]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[309]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[310]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[311]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[312]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[313]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[314]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[315]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[316]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[317]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[318]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[319]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[320]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[321]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[322]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[323]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[324]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[325]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[326]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[327]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[328]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[329]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[330]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[331]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[332]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[333]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[334]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[335]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[336]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[337]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[338]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[339]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[340]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[341]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[342]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[343]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[344]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[345]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[346]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[347]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[348]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[349]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[350]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[351]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[352]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[353]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[418]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[419]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[420]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[421]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[422]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[423]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[424]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[425]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[426]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[427]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[428]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[429]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[430]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[431]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[432]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[433]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[434]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[435]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[436]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[437]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[438]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[439]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[440]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[441]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[442]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[443]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[444]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[445]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[446]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[447]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[448]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[449]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[450]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[451]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[452]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[453]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[454]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[455]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[456]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[457]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[458]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[459]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[460]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[461]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[462]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[463]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[464]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[465]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[466]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[467]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[468]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[469]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[470]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[471]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[472]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[473]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[474]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[475]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[476]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[477]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[478]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[479]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[480]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[481]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[482]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[483]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[484]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[485]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[486]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[487]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[488]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[489]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[490]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[491]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[540]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[541]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[542]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[543]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[544]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[545]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[546]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[547]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[548]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[549]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[550]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[551]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[552]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[553]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[554]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[555]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[556]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[557]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[558]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[559]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[560]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[561]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[562]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[563]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[564]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[565]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[566]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[567]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[568]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[569]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[570]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[571]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[572]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[573]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[574]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[575]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[576]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[577]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[578]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[579]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[612]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[613]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[614]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[615]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[616]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[617]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[618]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[619]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[620]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[621]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[622]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[623]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[624]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[625]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[626]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[627]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[628]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[629]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[630]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[631]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[632]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[633]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[634]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[635]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[636]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[637]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[638]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[639]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[640]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".pt[641]" -type "float3" 2.2737368e-013 1.7881393e-007 0 ;
+	setAttr ".dr" 1;
+createNode transform -n "m_duck_bathtub_high_r:polySurface5" -p "m_duck_bathtub_high_r:polySurface1";
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape5" -p "m_duck_bathtub_high_r:polySurface5";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode transform -n "m_duck_bathtub_high_r:polySurface6" -p "m_duck_bathtub_high_r:polySurface1";
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape6" -p "m_duck_bathtub_high_r:polySurface6";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode transform -n "m_duck_bathtub_high_r:polySurface7" -p "m_duck_bathtub_high_r:polySurface1";
+	setAttr ".t" -type "double3" 0.018648539624814942 0 0 ;
+	setAttr ".rp" -type "double3" -0.42157350480556488 16.592771530151367 10.991504192352295 ;
+	setAttr ".sp" -type "double3" -0.42157350480556488 16.592771530151367 10.991504192352295 ;
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape7" -p "m_duck_bathtub_high_r:polySurface7";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode transform -n "m_duck_bathtub_high_r:transform6" -p "m_duck_bathtub_high_r:polySurface1";
+	setAttr ".v" no;
+createNode mesh -n "m_duck_bathtub_high_r:polySurfaceShape1" -p "m_duck_bathtub_high_r:transform6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dn" yes;
+	setAttr ".dr" 1;
+createNode transform -n "m_duck_bathtub_high_r:spotLight1";
 	setAttr ".t" -type "double3" 26.004476465081964 29.737590898508653 -26.80913543828699 ;
 	setAttr ".r" -type "double3" -31.800000000000516 139.99999999999977 0 ;
 	setAttr ".s" -type "double3" 2.6404788322997081 2.6404788322997081 2.6404788322997081 ;
-createNode spotLight -n "spotLightShape1" -p "spotLight1";
+createNode spotLight -n "m_duck_bathtub_high_r:spotLightShape1" -p "m_duck_bathtub_high_r:spotLight1";
 	setAttr -k off ".v";
 	setAttr ".rdl" 10;
 	setAttr ".col" 31.8731012748013;
 	setAttr ".lr" 0.20000000298023224;
 	setAttr ".ca" 55.968553155261375;
 	setAttr ".pa" -4.7899159692040012;
-createNode transform -n "spotLight2";
+createNode transform -n "m_duck_bathtub_high_r:spotLight2";
 	setAttr ".t" -type "double3" 37.952485360519255 26.474656049371497 3.1283932059771535 ;
 	setAttr ".r" -type "double3" -29.400000000009264 91.199999999999264 -7.6333312355124402e-014 ;
 	setAttr ".s" -type "double3" 2.6404788322997081 2.6404788322997081 2.6404788322997081 ;
-createNode spotLight -n "spotLightShape2" -p "spotLight2";
+createNode spotLight -n "m_duck_bathtub_high_r:spotLightShape2" -p "m_duck_bathtub_high_r:spotLight2";
 	setAttr -k off ".v";
 	setAttr ".rdl" 10;
 	setAttr ".col" 31.8731012748013;
 	setAttr ".lr" 0.20000000298023224;
 	setAttr ".ca" 55.968553155261375;
 	setAttr ".pa" -4.7899159692040012;
-createNode transform -n "pPlane1";
-	setAttr ".t" -type "double3" 0 -0.24596422488245118 0 ;
+createNode transform -n "m_duck_bathtub_high_r:pPlane1";
+	setAttr ".t" -type "double3" 0 -0.2459642248824512 0 ;
 	setAttr ".s" -type "double3" 40.88834892888444 40.88834892888444 40.88834892888444 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
+createNode mesh -n "m_duck_bathtub_high_r:pPlaneShape1" -p "m_duck_bathtub_high_r:pPlane1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -3478,39 +3881,39 @@ createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
-createNode shadingEngine -n "sink:initialShadingGroup";
+createNode shadingEngine -n "m_duck_bathtub_high_r:sink:initialShadingGroup";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "sink:materialInfo1";
-createNode lambert -n "sink:initialShadingGroup1";
-createNode script -n "uiConfigurationScriptNode";
+createNode materialInfo -n "m_duck_bathtub_high_r:sink:materialInfo1";
+createNode lambert -n "m_duck_bathtub_high_r:sink:initialShadingGroup1";
+createNode script -n "m_duck_bathtub_high_r:uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
+		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n"
 		+ "                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n"
 		+ "                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
 		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
 		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
+		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
 		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
 		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
-		+ "                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n"
 		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n"
-		+ "                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n"
 		+ "                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
-		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
+		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"all\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n"
-		+ "                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n"
+		+ "                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n"
 		+ "                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n"
-		+ "                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 1\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
+		+ "                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 1\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n"
 		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
 		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
 		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n"
@@ -3531,60 +3934,55 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n"
 		+ "                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n"
 		+ "                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n"
-		+ "                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n"
-		+ "                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n"
-		+ "                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 1\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 1\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n"
+		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
-createNode script -n "sceneConfigurationScriptNode";
+createNode script -n "m_duck_bathtub_high_r:sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
-createNode shadingEngine -n "bathtub:initialShadingGroup";
+createNode shadingEngine -n "m_duck_bathtub_high_r:bathtub:initialShadingGroup";
 	setAttr ".ihi" 0;
 	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 5 ".gn";
-createNode materialInfo -n "bathtub:materialInfo1";
-createNode groupId -n "bathtub:groupId1";
+createNode materialInfo -n "m_duck_bathtub_high_r:bathtub:materialInfo1";
+createNode groupId -n "m_duck_bathtub_high_r:bathtub:groupId1";
 	setAttr ".ihi" 0;
-createNode groupId -n "bathtub:groupId2";
+createNode groupId -n "m_duck_bathtub_high_r:bathtub:groupId2";
 	setAttr ".ihi" 0;
-createNode groupId -n "bathtub:groupId3";
+createNode groupId -n "m_duck_bathtub_high_r:bathtub:groupId3";
 	setAttr ".ihi" 0;
-createNode groupId -n "bathtub:groupId4";
+createNode groupId -n "m_duck_bathtub_high_r:bathtub:groupId4";
 	setAttr ".ihi" 0;
-createNode groupId -n "bathtub:groupId5";
+createNode groupId -n "m_duck_bathtub_high_r:bathtub:groupId5";
 	setAttr ".ihi" 0;
-createNode lambert -n "bathtub:initialShadingGroup1";
-createNode polyUnite -n "polyUnite1";
+createNode lambert -n "m_duck_bathtub_high_r:bathtub:initialShadingGroup1";
+createNode polyUnite -n "m_duck_bathtub_high_r:polyUnite1";
 	setAttr -s 5 ".ip";
 	setAttr -s 5 ".im";
-createNode blinn -n "blinn1";
+createNode blinn -n "m_duck_bathtub_high_r:blinn1";
 	setAttr ".rfl" 0.20000000298023224;
 	setAttr ".sro" 0.5;
-createNode shadingEngine -n "blinn1SG";
+createNode shadingEngine -n "m_duck_bathtub_high_r:blinn1SG";
 	setAttr ".ihi" 0;
+	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo1";
-createNode file -n "file1";
+	setAttr -s 8 ".gn";
+createNode materialInfo -n "m_duck_bathtub_high_r:materialInfo1";
+createNode file -n "m_duck_bathtub_high_r:file1";
 	setAttr ".ftn" -type "string" "C:/Users/TWelker/Documents/GitHub/SSUnitedStatesSproj/Art/UVs/Duck Suite/Bathtub/Txt_Duck_Bathtub_Color.jpg";
-createNode place2dTexture -n "place2dTexture1";
-createNode polyPlane -n "polyPlane1";
+createNode place2dTexture -n "m_duck_bathtub_high_r:place2dTexture1";
+createNode polyPlane -n "m_duck_bathtub_high_r:polyPlane1";
 	setAttr ".sw" 1;
 	setAttr ".sh" 1;
 	setAttr ".cuv" 2;
@@ -3735,6 +4133,706 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[44].value" -type "string" "transparent";
 	setAttr ".stringOptions[44].type" -type "string" "string";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
+createNode polyNormal -n "polyNormal1";
+	setAttr ".ics" -type "componentList" 9 "f[0:1]" "f[3:4]" "f[14]" "f[16]" "f[22:25]" "f[32]" "f[34:35]" "f[48]" "f[52]";
+	setAttr ".unm" no;
+createNode polySplitRing -n "polySplitRing1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[1]" "e[3]" "e[5]" "e[7]" "e[12]" "e[14]" "e[16]" "e[46]" "e[49]" "e[51]" "e[66]" "e[73]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.98329955339431763;
+	setAttr ".dr" no;
+	setAttr ".re" 49;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[3]" "e[5]" "e[12]" "e[16]" "e[49]" "e[66]" "e[1501]" "e[1505]" "e[1507]" "e[1513]" "e[1515]" "e[1521]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.02737671323120594;
+	setAttr ".re" 49;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[34]" "e[36:38]" "e[41:42]" "e[44]" "e[54]" "e[62]" "e[75:76]" "e[87]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.08555767685174942;
+	setAttr ".re" 41;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[34]" "e[38]" "e[42]" "e[62]" "e[75]" "e[1548:1549]" "e[1553]" "e[1555]" "e[1561]" "e[1565]" "e[1569]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.88233178853988647;
+	setAttr ".dr" no;
+	setAttr ".re" 1548;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[18]" "e[20]" "e[22]" "e[24]" "e[29]" "e[31]" "e[33]" "e[56]" "e[60]" "e[77:78]" "e[85]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.99057215452194214;
+	setAttr ".dr" no;
+	setAttr ".re" 24;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[18]" "e[24]" "e[29]" "e[60]" "e[77]" "e[1597]" "e[1601]" "e[1607]" "e[1609]" "e[1613]" "e[1615]" "e[1617]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.01421479694545269;
+	setAttr ".re" 24;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySeparate -n "m_duck_bathtub_high_r:polySeparate1";
+	setAttr ".ic" 6;
+	setAttr -s 6 ".out";
+createNode groupId -n "m_duck_bathtub_high_r:groupId1";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts1";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:849]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId2";
+	setAttr ".ihi" 0;
+createNode groupId -n "m_duck_bathtub_high_r:groupId3";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts2";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 126 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId4";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 144 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId5";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts4";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 92 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts5";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 144 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts6";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 264 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]";
+createNode groupId -n "m_duck_bathtub_high_r:groupId8";
+	setAttr ".ihi" 0;
+createNode groupParts -n "m_duck_bathtub_high_r:groupParts7";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 80 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]";
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace1";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[1]" "e[3]" "e[5]" "e[20]" "e[22]" "e[24]" "e[27]" "e[32]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.012684876099228859;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "m_duck_bathtub_high_r:polyTweak1";
+	setAttr ".uopa" yes;
+	setAttr -s 49 ".tk";
+	setAttr ".tk[0]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[1]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[2]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[3]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[4]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[5]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[6]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[7]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[8]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[9]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[10]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[11]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[12]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[13]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[14]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[15]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[57]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[58]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[59]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[60]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[61]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[62]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[63]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[64]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[65]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[66]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[67]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[68]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[69]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[70]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[71]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[72]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[73]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[74]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[75]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[76]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[77]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[78]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[79]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[80]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[81]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[82]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[83]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[84]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[85]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[86]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[87]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[88]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+	setAttr ".tk[89]" -type "float3" 0.02228022 0.098338678 -0.026545579 ;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[116:123]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.08872879296541214;
+	setAttr ".re" 117;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[77]" "e[79]" "e[81]" "e[84]" "e[87]" "e[90]" "e[93]" "e[96]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.094035156071186066;
+	setAttr ".re" 90;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[108:115]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.20563139021396637;
+	setAttr ".re" 109;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing10";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 7 "e[60]" "e[62:63]" "e[65]" "e[67]" "e[69]" "e[71]" "e[73]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.14246739447116852;
+	setAttr ".re" 69;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing11";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[172:179]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.042931858450174332;
+	setAttr ".re" 174;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing12";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[173]" "e[175:176]" "e[178]" "e[260:261]" "e[269]" "e[273]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.94306737184524536;
+	setAttr ".dr" no;
+	setAttr ".re" 260;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing13";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[140]" "e[142]" "e[144:145]" "e[147]" "e[150]" "e[152]" "e[154:155]" "e[159]" "e[262]" "e[268]" "e[278]" "e[284]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.9563259482383728;
+	setAttr ".dr" no;
+	setAttr ".re" 142;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing14";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 7 "e[124]" "e[126]" "e[128:129]" "e[131]" "e[133]" "e[135]" "e[137]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.0067633865401148796;
+	setAttr ".re" 126;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyDelEdge -n "m_duck_bathtub_high_r:polyDelEdge1";
+	setAttr ".ics" -type "componentList" 7 "e[322]" "e[324]" "e[326]" "e[328]" "e[330]" "e[332]" "e[334:335]";
+	setAttr ".cv" yes;
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace2";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polyTweak -n "m_duck_bathtub_high_r:polyTweak2";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".tk";
+	setAttr ".tk[65]" -type "float3" -1.8205334e-008 0.019931501 -0.00212195 ;
+	setAttr ".tk[66]" -type "float3" -1.5634751e-009 0.014479673 -0.0010741116 ;
+	setAttr ".tk[67]" -type "float3" 1.2422301e-009 -0.061563417 -0.026488287 ;
+	setAttr ".tk[68]" -type "float3" 1.2422304e-009 -0.061563417 -0.026488287 ;
+	setAttr ".tk[69]" -type "float3" -1.8205334e-008 0.019931501 -0.00212195 ;
+	setAttr ".tk[70]" -type "float3" 1.2422301e-009 -0.061563417 -0.026488287 ;
+	setAttr ".tk[76]" -type "float3" -1.8205334e-008 0.0083502242 -0.091122769 ;
+	setAttr ".tk[77]" -type "float3" -1.5634751e-009 0.002898392 -0.090074942 ;
+	setAttr ".tk[78]" -type "float3" -1.8205334e-008 0.0083502242 -0.091122769 ;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing15";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[1]" "e[3]" "e[5]" "e[8]" "e[11]" "e[14]" "e[17]" "e[20]" "e[23]" "e[26]" "e[29]" "e[32]" "e[35]" "e[38]" "e[41]" "e[44]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.046440675854682922;
+	setAttr ".re" 29;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing16";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[1]" "e[3]" "e[5]" "e[8]" "e[11]" "e[14]" "e[17]" "e[20]" "e[23]" "e[26]" "e[29]" "e[32]" "e[35]" "e[38]" "e[41]" "e[44]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.041469641029834747;
+	setAttr ".re" 26;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing17";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 15 "e[3]" "e[272:273]" "e[275]" "e[277]" "e[279]" "e[281]" "e[283]" "e[285]" "e[287]" "e[289]" "e[293]" "e[295]" "e[297]" "e[299]" "e[301]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.96571850776672363;
+	setAttr ".dr" no;
+	setAttr ".re" 272;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing18";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[96]" "e[98]" "e[100]" "e[102]" "e[104]" "e[106]" "e[108]" "e[110]" "e[112]" "e[114]" "e[116]" "e[118]" "e[120]" "e[122]" "e[124]" "e[126]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.9580615758895874;
+	setAttr ".dr" no;
+	setAttr ".re" 100;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing19";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[98]" "e[100]" "e[102]" "e[104]" "e[106]" "e[108]" "e[110]" "e[112]" "e[114]" "e[116]" "e[118]" "e[120]" "e[122]" "e[124]" "e[126]" "e[339]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.052894197404384613;
+	setAttr ".re" 100;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing20";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[240:255]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.84274238348007202;
+	setAttr ".dr" no;
+	setAttr ".re" 242;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing21";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[129]" "e[131]" "e[134]" "e[137]" "e[140]" "e[143]" "e[146]" "e[149]" "e[152]" "e[155]" "e[158]" "e[161]" "e[164]" "e[167]" "e[170]" "e[173]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.063790455460548401;
+	setAttr ".re" 134;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing22";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[256:271]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.86721223592758179;
+	setAttr ".dr" no;
+	setAttr ".re" 258;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing23";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[257:271]" "e[467]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.15144480764865875;
+	setAttr ".re" 258;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing24";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[177]" "e[179]" "e[182]" "e[185]" "e[188]" "e[191]" "e[194]" "e[197]" "e[200]" "e[203]" "e[206]" "e[209]" "e[212]" "e[215]" "e[218]" "e[221]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.99221962690353394;
+	setAttr ".dr" no;
+	setAttr ".re" 182;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing25";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[179]" "e[182]" "e[185]" "e[188]" "e[191]" "e[194]" "e[197]" "e[200]" "e[203]" "e[206]" "e[209]" "e[212]" "e[215]" "e[218]" "e[221]" "e[531]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.019291402772068977;
+	setAttr ".re" 182;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing26";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[224:239]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.8667948842048645;
+	setAttr ".dr" no;
+	setAttr ".re" 226;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing27";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[225:239]" "e[595]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.12229720503091812;
+	setAttr ".re" 226;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing28";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 15 "e[3]" "e[272:273]" "e[275]" "e[277]" "e[279]" "e[281]" "e[283]" "e[285]" "e[287]" "e[291]" "e[293]" "e[295]" "e[297]" "e[299]" "e[301]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.91427570581436157;
+	setAttr ".dr" no;
+	setAttr ".re" 272;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing29";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[96]" "e[98]" "e[100]" "e[102]" "e[104]" "e[106]" "e[108]" "e[110]" "e[112]" "e[114]" "e[116]" "e[118]" "e[120]" "e[122]" "e[124]" "e[126]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.88864308595657349;
+	setAttr ".dr" no;
+	setAttr ".re" 102;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing30";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[98]" "e[100]" "e[102]" "e[104]" "e[106]" "e[108]" "e[110]" "e[112]" "e[114]" "e[116]" "e[118]" "e[120]" "e[122]" "e[124]" "e[126]" "e[341]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.13432326912879944;
+	setAttr ".re" 102;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing31";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[240:255]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.87696421146392822;
+	setAttr ".dr" no;
+	setAttr ".re" 243;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing32";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[129]" "e[131]" "e[134]" "e[137]" "e[140]" "e[143]" "e[146]" "e[149]" "e[152]" "e[155]" "e[158]" "e[161]" "e[164]" "e[167]" "e[170]" "e[173]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.068107351660728455;
+	setAttr ".re" 137;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing33";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[256:271]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.88466036319732666;
+	setAttr ".dr" no;
+	setAttr ".re" 259;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing34";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[257:271]" "e[469]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.2691139280796051;
+	setAttr ".re" 259;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing35";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[177]" "e[179]" "e[182]" "e[185]" "e[188]" "e[191]" "e[194]" "e[197]" "e[200]" "e[203]" "e[206]" "e[209]" "e[212]" "e[215]" "e[218]" "e[221]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.989704430103302;
+	setAttr ".dr" no;
+	setAttr ".re" 185;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing36";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 16 "e[179]" "e[182]" "e[185]" "e[188]" "e[191]" "e[194]" "e[197]" "e[200]" "e[203]" "e[206]" "e[209]" "e[212]" "e[215]" "e[218]" "e[221]" "e[533]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.012590372003614902;
+	setAttr ".re" 185;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing37";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[224:239]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.90948939323425293;
+	setAttr ".dr" no;
+	setAttr ".re" 227;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing38";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[225:239]" "e[597]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.082749500870704651;
+	setAttr ".re" 227;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace3";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace4";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing39";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[265]" "e[267]" "e[269]" "e[272]" "e[275]" "e[278]" "e[281]" "e[284]" "e[287]" "e[290]" "e[293]" "e[296]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.011122701689600945;
+	setAttr ".re" 278;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing40";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[492:503]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.98370438814163208;
+	setAttr ".dr" no;
+	setAttr ".re" 499;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing41";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[492]" "e[494:503]" "e[553]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.039160817861557007;
+	setAttr ".re" 498;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing42";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[468]" "e[470:471]" "e[473]" "e[475]" "e[477]" "e[479]" "e[481]" "e[483]" "e[485]" "e[487]" "e[489]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.79335242509841919;
+	setAttr ".dr" no;
+	setAttr ".re" 479;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing43";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[468]" "e[471]" "e[473]" "e[475]" "e[477]" "e[479]" "e[481]" "e[483]" "e[485]" "e[487]" "e[489]" "e[599]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.17130225896835327;
+	setAttr ".re" 479;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing44";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[433]" "e[435]" "e[437]" "e[440]" "e[443]" "e[446]" "e[449]" "e[452]" "e[455]" "e[458]" "e[461]" "e[464]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.90561413764953613;
+	setAttr ".dr" no;
+	setAttr ".re" 455;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing45";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[420:431]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.96932137012481689;
+	setAttr ".dr" no;
+	setAttr ".re" 422;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing46";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[240]" "e[242]" "e[244]" "e[246]" "e[248]" "e[250]" "e[252]" "e[254]" "e[256]" "e[258]" "e[260]" "e[262]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.094096168875694275;
+	setAttr ".re" 252;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing47";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[240]" "e[684:685]" "e[687]" "e[689]" "e[691]" "e[693]" "e[697]" "e[699]" "e[701]" "e[703]" "e[705]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.86806929111480713;
+	setAttr ".dr" no;
+	setAttr ".re" 684;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing48";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[216]" "e[218]" "e[220]" "e[222]" "e[224]" "e[226]" "e[228]" "e[230]" "e[232]" "e[234]" "e[236]" "e[238]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.10370156168937683;
+	setAttr ".re" 228;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing49";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[216]" "e[732:733]" "e[735]" "e[737]" "e[739]" "e[741]" "e[745]" "e[747]" "e[749]" "e[751]" "e[753]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.74132400751113892;
+	setAttr ".dr" no;
+	setAttr ".re" 732;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing50";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[168]" "e[170:171]" "e[173]" "e[175]" "e[177]" "e[179]" "e[181]" "e[183]" "e[185]" "e[187]" "e[189]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.93282979726791382;
+	setAttr ".dr" no;
+	setAttr ".re" 177;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing51";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[37]" "e[39]" "e[41]" "e[44]" "e[47]" "e[50]" "e[53]" "e[56]" "e[59]" "e[62]" "e[65]" "e[68]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.033751353621482849;
+	setAttr ".re" 53;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing52";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[204:215]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.17534573376178741;
+	setAttr ".re" 208;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing53";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[204]" "e[828:829]" "e[831]" "e[833]" "e[837]" "e[839]" "e[841]" "e[843]" "e[845]" "e[847]" "e[849]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.8417244553565979;
+	setAttr ".dr" no;
+	setAttr ".re" 828;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing54";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[1]" "e[3]" "e[5]" "e[8]" "e[11]" "e[14]" "e[17]" "e[20]" "e[23]" "e[26]" "e[29]" "e[32]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.17327028512954712;
+	setAttr ".re" 20;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing55";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 11 "e[3]" "e[876:877]" "e[879]" "e[881]" "e[883]" "e[885]" "e[887]" "e[891]" "e[893]" "e[895]" "e[897]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.76792454719543457;
+	setAttr ".dr" no;
+	setAttr ".re" 876;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace5";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polyTweak -n "m_duck_bathtub_high_r:polyTweak3";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".tk[205:216]" -type "float3"  0.011752632 0.00063576183
+		 -0.025152426 0.021005234 -0.00087586354 -0.013109398 0.024629468 -0.0030137911 0.0034697584
+		 0.021654587 -0.0052049085 0.020142335 0.012876946 -0.0068619438 0.032440986 0.00064900942
+		 -0.0075413855 0.037070259 -0.011752633 -0.0070607839 0.032789957 -0.021005232 -0.00554869
+		 0.02074649 -0.024629468 -0.0034107354 0.0041677542 -0.021655038 -0.0012195886 -0.012504985
+		 -0.012876948 0.00043787106 -0.024803653 -0.00064900989 0.0011168323 -0.029433157;
+createNode polySplitRing -n "m_duck_bathtub_high_r:polySplitRing56";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[128:135]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.06268760855693839 0 0 1;
+	setAttr ".wt" 0.95119756460189819;
+	setAttr ".dr" no;
+	setAttr ".re" 128;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySmoothFace -n "m_duck_bathtub_high_r:polySmoothFace6";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3754,8 +4852,6 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :renderGlobalsList1;
-select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "mentalRay";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :defaultLightSet;
@@ -3772,107 +4868,512 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "bathtub:groupId5.id" "bathtub:polySurface1Shape.iog.og[0].gid";
-connectAttr "bathtub:initialShadingGroup.mwc" "bathtub:polySurface1Shape.iog.og[0].gco"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId5.id" "m_duck_bathtub_high_r:bathtub:polySurface1Shape.iog.og[0].gid"
 		;
-connectAttr "bathtub:groupId4.id" "bathtub:pCylinder1Shape.iog.og[0].gid";
-connectAttr "bathtub:initialShadingGroup.mwc" "bathtub:pCylinder1Shape.iog.og[0].gco"
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.mwc" "m_duck_bathtub_high_r:bathtub:polySurface1Shape.iog.og[0].gco"
 		;
-connectAttr "bathtub:groupId3.id" "bathtub:polySurface2Shape.iog.og[0].gid";
-connectAttr "bathtub:initialShadingGroup.mwc" "bathtub:polySurface2Shape.iog.og[0].gco"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId4.id" "m_duck_bathtub_high_r:bathtub:pCylinder1Shape.iog.og[0].gid"
 		;
-connectAttr "bathtub:groupId2.id" "bathtub:pCylinder3Shape.iog.og[0].gid";
-connectAttr "bathtub:initialShadingGroup.mwc" "bathtub:pCylinder3Shape.iog.og[0].gco"
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.mwc" "m_duck_bathtub_high_r:bathtub:pCylinder1Shape.iog.og[0].gco"
 		;
-connectAttr "bathtub:groupId1.id" "bathtub:polySurface5Shape.iog.og[0].gid";
-connectAttr "bathtub:initialShadingGroup.mwc" "bathtub:polySurface5Shape.iog.og[0].gco"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId3.id" "m_duck_bathtub_high_r:bathtub:polySurface2Shape.iog.og[0].gid"
 		;
-connectAttr "polyUnite1.out" "polySurfaceShape1.i";
-connectAttr "polyPlane1.out" "pPlaneShape1.i";
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.mwc" "m_duck_bathtub_high_r:bathtub:polySurface2Shape.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId2.id" "m_duck_bathtub_high_r:bathtub:pCylinder3Shape.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.mwc" "m_duck_bathtub_high_r:bathtub:pCylinder3Shape.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId1.id" "m_duck_bathtub_high_r:bathtub:polySurface5Shape.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.mwc" "m_duck_bathtub_high_r:bathtub:polySurface5Shape.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace1.out" "m_duck_bathtub_high_r:polySurfaceShape2.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId3.id" "m_duck_bathtub_high_r:polySurfaceShape2.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape2.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace3.out" "m_duck_bathtub_high_r:polySurfaceShape3.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId4.id" "m_duck_bathtub_high_r:polySurfaceShape3.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape3.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace2.out" "m_duck_bathtub_high_r:polySurfaceShape4.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId5.id" "m_duck_bathtub_high_r:polySurfaceShape4.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape4.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace4.out" "m_duck_bathtub_high_r:polySurfaceShape5.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId6.id" "m_duck_bathtub_high_r:polySurfaceShape5.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape5.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace5.out" "m_duck_bathtub_high_r:polySurfaceShape6.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId7.id" "m_duck_bathtub_high_r:polySurfaceShape6.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape6.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:polySmoothFace6.out" "m_duck_bathtub_high_r:polySurfaceShape7.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId8.id" "m_duck_bathtub_high_r:polySurfaceShape7.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape7.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts1.og" "m_duck_bathtub_high_r:polySurfaceShape1.i"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId1.id" "m_duck_bathtub_high_r:polySurfaceShape1.iog.og[0].gid"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.mwc" "m_duck_bathtub_high_r:polySurfaceShape1.iog.og[0].gco"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId2.id" "m_duck_bathtub_high_r:polySurfaceShape1.ciog.cog[0].cgid"
+		;
+connectAttr "m_duck_bathtub_high_r:polyPlane1.out" "m_duck_bathtub_high_r:pPlaneShape1.i"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "sink:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "bathtub:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "m_duck_bathtub_high_r:sink:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "m_duck_bathtub_high_r:blinn1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "sink:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "bathtub:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "m_duck_bathtub_high_r:sink:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "m_duck_bathtub_high_r:blinn1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "sink:initialShadingGroup1.oc" "sink:initialShadingGroup.ss";
-connectAttr "sink:initialShadingGroup.msg" "sink:materialInfo1.sg";
-connectAttr "sink:initialShadingGroup1.msg" "sink:materialInfo1.m";
-connectAttr "bathtub:initialShadingGroup1.oc" "bathtub:initialShadingGroup.ss";
-connectAttr "bathtub:groupId1.msg" "bathtub:initialShadingGroup.gn" -na;
-connectAttr "bathtub:groupId2.msg" "bathtub:initialShadingGroup.gn" -na;
-connectAttr "bathtub:groupId3.msg" "bathtub:initialShadingGroup.gn" -na;
-connectAttr "bathtub:groupId4.msg" "bathtub:initialShadingGroup.gn" -na;
-connectAttr "bathtub:groupId5.msg" "bathtub:initialShadingGroup.gn" -na;
-connectAttr "bathtub:polySurface5Shape.iog.og[0]" "bathtub:initialShadingGroup.dsm"
+connectAttr "m_duck_bathtub_high_r:sink:initialShadingGroup1.oc" "m_duck_bathtub_high_r:sink:initialShadingGroup.ss"
+		;
+connectAttr "m_duck_bathtub_high_r:sink:initialShadingGroup.msg" "m_duck_bathtub_high_r:sink:materialInfo1.sg"
+		;
+connectAttr "m_duck_bathtub_high_r:sink:initialShadingGroup1.msg" "m_duck_bathtub_high_r:sink:materialInfo1.m"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup1.oc" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.ss"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId1.msg" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.gn"
 		 -na;
-connectAttr "bathtub:pCylinder3Shape.iog.og[0]" "bathtub:initialShadingGroup.dsm"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId2.msg" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.gn"
 		 -na;
-connectAttr "bathtub:polySurface2Shape.iog.og[0]" "bathtub:initialShadingGroup.dsm"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId3.msg" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.gn"
 		 -na;
-connectAttr "bathtub:pCylinder1Shape.iog.og[0]" "bathtub:initialShadingGroup.dsm"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId4.msg" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.gn"
 		 -na;
-connectAttr "bathtub:polySurface1Shape.iog.og[0]" "bathtub:initialShadingGroup.dsm"
+connectAttr "m_duck_bathtub_high_r:bathtub:groupId5.msg" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.gn"
 		 -na;
-connectAttr "bathtub:initialShadingGroup.msg" "bathtub:materialInfo1.sg";
-connectAttr "bathtub:initialShadingGroup1.msg" "bathtub:materialInfo1.m";
-connectAttr "bathtub:polySurface1Shape.o" "polyUnite1.ip[0]";
-connectAttr "bathtub:pCylinder1Shape.o" "polyUnite1.ip[1]";
-connectAttr "bathtub:polySurface2Shape.o" "polyUnite1.ip[2]";
-connectAttr "bathtub:pCylinder3Shape.o" "polyUnite1.ip[3]";
-connectAttr "bathtub:polySurface5Shape.o" "polyUnite1.ip[4]";
-connectAttr "bathtub:polySurface1Shape.wm" "polyUnite1.im[0]";
-connectAttr "bathtub:pCylinder1Shape.wm" "polyUnite1.im[1]";
-connectAttr "bathtub:polySurface2Shape.wm" "polyUnite1.im[2]";
-connectAttr "bathtub:pCylinder3Shape.wm" "polyUnite1.im[3]";
-connectAttr "bathtub:polySurface5Shape.wm" "polyUnite1.im[4]";
-connectAttr "file1.oc" "blinn1.c";
-connectAttr "blinn1.oc" "blinn1SG.ss";
-connectAttr "polySurfaceShape1.iog" "blinn1SG.dsm" -na;
-connectAttr "blinn1SG.msg" "materialInfo1.sg";
-connectAttr "blinn1.msg" "materialInfo1.m";
-connectAttr "file1.msg" "materialInfo1.t" -na;
-connectAttr "place2dTexture1.c" "file1.c";
-connectAttr "place2dTexture1.tf" "file1.tf";
-connectAttr "place2dTexture1.rf" "file1.rf";
-connectAttr "place2dTexture1.mu" "file1.mu";
-connectAttr "place2dTexture1.mv" "file1.mv";
-connectAttr "place2dTexture1.s" "file1.s";
-connectAttr "place2dTexture1.wu" "file1.wu";
-connectAttr "place2dTexture1.wv" "file1.wv";
-connectAttr "place2dTexture1.re" "file1.re";
-connectAttr "place2dTexture1.of" "file1.of";
-connectAttr "place2dTexture1.r" "file1.ro";
-connectAttr "place2dTexture1.n" "file1.n";
-connectAttr "place2dTexture1.vt1" "file1.vt1";
-connectAttr "place2dTexture1.vt2" "file1.vt2";
-connectAttr "place2dTexture1.vt3" "file1.vt3";
-connectAttr "place2dTexture1.vc1" "file1.vc1";
-connectAttr "place2dTexture1.o" "file1.uv";
-connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface5Shape.iog.og[0]" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder3Shape.iog.og[0]" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface2Shape.iog.og[0]" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder1Shape.iog.og[0]" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface1Shape.iog.og[0]" "m_duck_bathtub_high_r:bathtub:initialShadingGroup.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.msg" "m_duck_bathtub_high_r:bathtub:materialInfo1.sg"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup1.msg" "m_duck_bathtub_high_r:bathtub:materialInfo1.m"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface1Shape.o" "m_duck_bathtub_high_r:polyUnite1.ip[0]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder1Shape.o" "m_duck_bathtub_high_r:polyUnite1.ip[1]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface2Shape.o" "m_duck_bathtub_high_r:polyUnite1.ip[2]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder3Shape.o" "m_duck_bathtub_high_r:polyUnite1.ip[3]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface5Shape.o" "m_duck_bathtub_high_r:polyUnite1.ip[4]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface1Shape.wm" "m_duck_bathtub_high_r:polyUnite1.im[0]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder1Shape.wm" "m_duck_bathtub_high_r:polyUnite1.im[1]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface2Shape.wm" "m_duck_bathtub_high_r:polyUnite1.im[2]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:pCylinder3Shape.wm" "m_duck_bathtub_high_r:polyUnite1.im[3]"
+		;
+connectAttr "m_duck_bathtub_high_r:bathtub:polySurface5Shape.wm" "m_duck_bathtub_high_r:polyUnite1.im[4]"
+		;
+connectAttr "m_duck_bathtub_high_r:file1.oc" "m_duck_bathtub_high_r:blinn1.c";
+connectAttr "m_duck_bathtub_high_r:blinn1.oc" "m_duck_bathtub_high_r:blinn1SG.ss"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.ciog.cog[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape2.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape7.iog.og[0]" "m_duck_bathtub_high_r:blinn1SG.dsm"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId1.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId2.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId3.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId4.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId5.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId6.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId7.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:groupId8.msg" "m_duck_bathtub_high_r:blinn1SG.gn"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.msg" "m_duck_bathtub_high_r:materialInfo1.sg"
+		;
+connectAttr "m_duck_bathtub_high_r:blinn1.msg" "m_duck_bathtub_high_r:materialInfo1.m"
+		;
+connectAttr "m_duck_bathtub_high_r:file1.msg" "m_duck_bathtub_high_r:materialInfo1.t"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.c" "m_duck_bathtub_high_r:file1.c"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.tf" "m_duck_bathtub_high_r:file1.tf"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.rf" "m_duck_bathtub_high_r:file1.rf"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.mu" "m_duck_bathtub_high_r:file1.mu"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.mv" "m_duck_bathtub_high_r:file1.mv"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.s" "m_duck_bathtub_high_r:file1.s"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.wu" "m_duck_bathtub_high_r:file1.wu"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.wv" "m_duck_bathtub_high_r:file1.wv"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.re" "m_duck_bathtub_high_r:file1.re"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.of" "m_duck_bathtub_high_r:file1.of"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.r" "m_duck_bathtub_high_r:file1.ro"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.n" "m_duck_bathtub_high_r:file1.n"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.vt1" "m_duck_bathtub_high_r:file1.vt1"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.vt2" "m_duck_bathtub_high_r:file1.vt2"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.vt3" "m_duck_bathtub_high_r:file1.vt3"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.vc1" "m_duck_bathtub_high_r:file1.vc1"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.o" "m_duck_bathtub_high_r:file1.uv"
+		;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.ofs" "m_duck_bathtub_high_r:file1.fs"
+		;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
 connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
-connectAttr "sink:initialShadingGroup.pa" ":renderPartition.st" -na;
-connectAttr "bathtub:initialShadingGroup.pa" ":renderPartition.st" -na;
-connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
-connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "sink:initialShadingGroup1.msg" ":defaultShaderList1.s" -na;
-connectAttr "bathtub:initialShadingGroup1.msg" ":defaultShaderList1.s" -na;
-connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
-connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
-connectAttr "spotLightShape2.ltd" ":lightList1.l" -na;
-connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "m_duck_bathtub_high_r:polyUnite1.out" "polyNormal1.ip";
+connectAttr "polyNormal1.out" "polySplitRing1.ip";
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "polySplitRing1.mp";
+connectAttr "polySplitRing1.out" "m_duck_bathtub_high_r:polySplitRing1.ip";
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "m_duck_bathtub_high_r:polySplitRing1.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing1.out" "m_duck_bathtub_high_r:polySplitRing2.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "m_duck_bathtub_high_r:polySplitRing2.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing2.out" "m_duck_bathtub_high_r:polySplitRing3.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "m_duck_bathtub_high_r:polySplitRing3.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing3.out" "m_duck_bathtub_high_r:polySplitRing4.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "m_duck_bathtub_high_r:polySplitRing4.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing4.out" "m_duck_bathtub_high_r:polySplitRing5.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.wm" "m_duck_bathtub_high_r:polySplitRing5.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape1.o" "m_duck_bathtub_high_r:polySeparate1.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing5.out" "m_duck_bathtub_high_r:groupParts1.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId1.id" "m_duck_bathtub_high_r:groupParts1.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[0]" "m_duck_bathtub_high_r:groupParts2.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId3.id" "m_duck_bathtub_high_r:groupParts2.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[1]" "m_duck_bathtub_high_r:groupParts3.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId4.id" "m_duck_bathtub_high_r:groupParts3.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[2]" "m_duck_bathtub_high_r:groupParts4.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId5.id" "m_duck_bathtub_high_r:groupParts4.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[3]" "m_duck_bathtub_high_r:groupParts5.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId6.id" "m_duck_bathtub_high_r:groupParts5.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[4]" "m_duck_bathtub_high_r:groupParts6.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId7.id" "m_duck_bathtub_high_r:groupParts6.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:polySeparate1.out[5]" "m_duck_bathtub_high_r:groupParts7.ig"
+		;
+connectAttr "m_duck_bathtub_high_r:groupId8.id" "m_duck_bathtub_high_r:groupParts7.gi"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts2.og" "m_duck_bathtub_high_r:polySmoothFace1.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polyTweak1.out" "m_duck_bathtub_high_r:polySplitRing6.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing6.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts4.og" "m_duck_bathtub_high_r:polyTweak1.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing6.out" "m_duck_bathtub_high_r:polySplitRing7.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing7.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing7.out" "m_duck_bathtub_high_r:polySplitRing8.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing8.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing8.out" "m_duck_bathtub_high_r:polySplitRing9.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing9.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing9.out" "m_duck_bathtub_high_r:polySplitRing10.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing10.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing10.out" "m_duck_bathtub_high_r:polySplitRing11.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing11.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing11.out" "m_duck_bathtub_high_r:polySplitRing12.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing12.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing12.out" "m_duck_bathtub_high_r:polySplitRing13.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing13.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing13.out" "m_duck_bathtub_high_r:polySplitRing14.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape4.wm" "m_duck_bathtub_high_r:polySplitRing14.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing14.out" "m_duck_bathtub_high_r:polyDelEdge1.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polyTweak2.out" "m_duck_bathtub_high_r:polySmoothFace2.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polyDelEdge1.out" "m_duck_bathtub_high_r:polyTweak2.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts5.og" "m_duck_bathtub_high_r:polySplitRing15.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing15.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts3.og" "m_duck_bathtub_high_r:polySplitRing16.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing16.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing15.out" "m_duck_bathtub_high_r:polySplitRing17.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing17.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing17.out" "m_duck_bathtub_high_r:polySplitRing18.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing18.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing18.out" "m_duck_bathtub_high_r:polySplitRing19.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing19.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing19.out" "m_duck_bathtub_high_r:polySplitRing20.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing20.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing20.out" "m_duck_bathtub_high_r:polySplitRing21.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing21.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing21.out" "m_duck_bathtub_high_r:polySplitRing22.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing22.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing22.out" "m_duck_bathtub_high_r:polySplitRing23.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing23.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing23.out" "m_duck_bathtub_high_r:polySplitRing24.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing24.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing24.out" "m_duck_bathtub_high_r:polySplitRing25.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing25.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing25.out" "m_duck_bathtub_high_r:polySplitRing26.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing26.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing26.out" "m_duck_bathtub_high_r:polySplitRing27.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape5.wm" "m_duck_bathtub_high_r:polySplitRing27.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing16.out" "m_duck_bathtub_high_r:polySplitRing28.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing28.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing28.out" "m_duck_bathtub_high_r:polySplitRing29.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing29.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing29.out" "m_duck_bathtub_high_r:polySplitRing30.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing30.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing30.out" "m_duck_bathtub_high_r:polySplitRing31.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing31.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing31.out" "m_duck_bathtub_high_r:polySplitRing32.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing32.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing32.out" "m_duck_bathtub_high_r:polySplitRing33.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing33.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing33.out" "m_duck_bathtub_high_r:polySplitRing34.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing34.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing34.out" "m_duck_bathtub_high_r:polySplitRing35.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing35.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing35.out" "m_duck_bathtub_high_r:polySplitRing36.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing36.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing36.out" "m_duck_bathtub_high_r:polySplitRing37.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing37.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing37.out" "m_duck_bathtub_high_r:polySplitRing38.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape3.wm" "m_duck_bathtub_high_r:polySplitRing38.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing38.out" "m_duck_bathtub_high_r:polySmoothFace3.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing27.out" "m_duck_bathtub_high_r:polySmoothFace4.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts6.og" "m_duck_bathtub_high_r:polySplitRing39.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing39.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing39.out" "m_duck_bathtub_high_r:polySplitRing40.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing40.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing40.out" "m_duck_bathtub_high_r:polySplitRing41.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing41.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing41.out" "m_duck_bathtub_high_r:polySplitRing42.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing42.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing42.out" "m_duck_bathtub_high_r:polySplitRing43.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing43.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing43.out" "m_duck_bathtub_high_r:polySplitRing44.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing44.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing44.out" "m_duck_bathtub_high_r:polySplitRing45.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing45.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing45.out" "m_duck_bathtub_high_r:polySplitRing46.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing46.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing46.out" "m_duck_bathtub_high_r:polySplitRing47.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing47.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing47.out" "m_duck_bathtub_high_r:polySplitRing48.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing48.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing48.out" "m_duck_bathtub_high_r:polySplitRing49.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing49.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing49.out" "m_duck_bathtub_high_r:polySplitRing50.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing50.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing50.out" "m_duck_bathtub_high_r:polySplitRing51.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing51.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing51.out" "m_duck_bathtub_high_r:polySplitRing52.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing52.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing52.out" "m_duck_bathtub_high_r:polySplitRing53.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing53.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing53.out" "m_duck_bathtub_high_r:polySplitRing54.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing54.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing54.out" "m_duck_bathtub_high_r:polySplitRing55.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape6.wm" "m_duck_bathtub_high_r:polySplitRing55.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polyTweak3.out" "m_duck_bathtub_high_r:polySmoothFace5.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing55.out" "m_duck_bathtub_high_r:polyTweak3.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:groupParts7.og" "m_duck_bathtub_high_r:polySplitRing56.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:polySurfaceShape7.wm" "m_duck_bathtub_high_r:polySplitRing56.mp"
+		;
+connectAttr "m_duck_bathtub_high_r:polySplitRing56.out" "m_duck_bathtub_high_r:polySmoothFace6.ip"
+		;
+connectAttr "m_duck_bathtub_high_r:sink:initialShadingGroup.pa" ":renderPartition.st"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup.pa" ":renderPartition.st"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:blinn1SG.pa" ":renderPartition.st" -na;
+connectAttr "m_duck_bathtub_high_r:pPlaneShape1.iog" ":initialShadingGroup.dsm" 
+		-na;
+connectAttr "m_duck_bathtub_high_r:sink:initialShadingGroup1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:bathtub:initialShadingGroup1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "m_duck_bathtub_high_r:blinn1.msg" ":defaultShaderList1.s" -na;
+connectAttr "m_duck_bathtub_high_r:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "m_duck_bathtub_high_r:spotLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "m_duck_bathtub_high_r:spotLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "m_duck_bathtub_high_r:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "spotLight2.iog" ":defaultLightSet.dsm" -na;
+connectAttr "m_duck_bathtub_high_r:spotLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "m_duck_bathtub_high_r:spotLight2.iog" ":defaultLightSet.dsm" -na;
 // End of m_duck_bathtub_high_r.ma
