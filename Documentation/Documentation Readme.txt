@@ -28,8 +28,33 @@ Scene Documentation:
 -->List of scenes (SUBJECT TO CHANGE):
    >> First-Class Promenade Deck (primary hub area):
    >> Duck Suite
-   >> [...]
+   >> Bridge
+   >>[...]
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Build Version Documentation:
+-->Build 1.0.0: Added first-person controller, nullified gravity. Controls are mouse to look and arrow keys to move.
+-->Build 1.1.0: Added placeholder environment.
+-->Build 2.0.0: Added rail system using iTween.  Rail system not functional yet.
+-->Build 3.0.0: Rail system is made functional as a guided tour.  Occlusion culling is activated but has nothing to act on.
+-->Build 3.1.0: Rail system is made controllable with Left Control for forward motion only. Look is now right-click+mouse on inverted X and Y axes.
+-->Build 4.0.0: Basic fast-travel system between scenes is added, controlled by Left Alt, one-way only. Look is now Left Shift+mouse.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Graphics/Logo Documentation:
+
+Logo Sizes Needed:
+-->152x152px (App Main Icon/Web Clip Icon)
+-->1024x1024px (App Store Icon)
+-->2048x1536px (Landscape Launch Image)
+-->80x80px (Spotlight Search Icon)
+-->58x58px (Settings Icon)
+-->44x44px (Toolbar Icon)
+-->50x50 (Tab Bar Icon)
+
+Images to be in non-interlaced PNG files.
+
 
 ///[cont.] WILL CHANGE AS PROJECT PROGRESSES.///
