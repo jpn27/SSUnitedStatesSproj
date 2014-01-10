@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlassShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Glass2.shader">
     <Files>
-      <File FileName="Assets\GlassShader.shader" Line="10" Column="29" />
+      <File FileName="Assets\GlassShader.shader" Line="12" Column="43" />
+      <File FileName="Assets\EtchedGlassShader.shader" Line="42" Column="4" />
+      <File FileName="Assets\Glass2.shader" Line="11" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
