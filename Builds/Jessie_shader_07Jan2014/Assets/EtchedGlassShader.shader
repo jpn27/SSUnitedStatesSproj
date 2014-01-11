@@ -20,7 +20,7 @@
 		Lighting On
 
 		// Render both front and back facing polygons.
-		Cull Off
+		//Cull Off
 
 		// first pass:
 		//   render any pixels that are more than [_Cutoff] opaque
@@ -28,8 +28,6 @@
 			AlphaTest Greater [_Cutoff]
 			SetTexture [_MainTex] {
 				combine texture * primary, texture
-			
-
 			}
 		}
 
@@ -45,29 +43,6 @@
 			
 			// Only render pixels less or equal to the value
 			AlphaTest LEqual [_Cutoff]
-
-			// Set up alpha blending
-			Blend SrcAlpha OneMinusSrcAlpha
-			
-			
-
-			SetTexture [_MainTex] {
-				combine texture * primary, texture
-			}
-		}
-		
-				// Third pass:
-		//   render in the transparent parts.
-		Pass {
-					
-			// Dont write to the depth buffer
-			ZWrite off
-			
-			// Don't write pixels we have already written.
-			ZTest Less
-			
-			// Only render pixels greater or equal to the value
-			AlphaTest Greater [_Cutoff]
 
 			// Set up alpha blending
 			Blend SrcAlpha OneMinusSrcAlpha
