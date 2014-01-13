@@ -1,12 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Delete Alpha.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlassShader.shader">
     <Files>
-      <File FileName="Assets\GlassShader.shader" Line="19" Column="45" />
-      <File FileName="Assets\EtchedGlassShader.shader" Line="12" Column="13" />
-      <File FileName="Assets\Glass2.shader" Line="13" Column="14" />
-      <File FileName="Assets\Invisible Shadows.shader" Line="10" Column="2" />
-      <File FileName="Assets\Delete Alpha.shader" Line="20" Column="5" />
+      <File FileName="Assets\Glass2.shader" Line="5" Column="34" />
+      <File FileName="Assets\Matte Shadow.shader" Line="7" Column="2" />
+      <File FileName="Assets\GlassShader.shader" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

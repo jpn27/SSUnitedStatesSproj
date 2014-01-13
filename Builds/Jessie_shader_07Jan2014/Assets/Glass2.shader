@@ -3,7 +3,6 @@
 	Properties {
 		_MainTex ("Color (RGB) Alpha (A)", 2D) = "white"
 		_Cube ("Cubemap", CUBE) = "" {}
-		_ShadowIntensity ("Shadow Intensity", Range (0, 1)) = 0.6
 	}
 	
 	SubShader {
@@ -16,6 +15,7 @@
 	  
 	  CGPROGRAM
 	  #pragma surface surf BlinnPhong alpha 
+	  
 	  struct Input {
 	      float2 uv_MainTex;
 	      float3 worldRefl;
@@ -28,6 +28,8 @@
 	      o.Alpha = tex2D (_MainTex, IN.uv_MainTex).a;
 	      o.Emission = texCUBE (_Cube, IN.worldRefl).rgb;
 	  }
+
+	  
 	  ENDCG
 	} 
 	Fallback "Diffuse"

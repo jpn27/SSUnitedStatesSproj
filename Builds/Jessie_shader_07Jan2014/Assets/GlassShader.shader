@@ -1,5 +1,11 @@
 ﻿Shader "Glass Shader" {
+
+Properties {
+	_MainTex ("Color (RGB) Alpha (A)", 2D) = "white"
+	_Cube ("Cubemap", CUBE) = "" {}
 	
+
+	}	
    SubShader {
       Tags { "Queue" = "Transparent" } 
          // draw after all opaque geometry has been drawn
@@ -23,7 +29,7 @@
  
          float4 frag(void) : COLOR 
          {
-            return float4(1.0, 0.0, 0.0, 0.3);
+            return float4(0.0, 0.0, 0.0, 0.3);
                // the fourth component (alpha) is important: 
                // this is semitransparent red
          }
@@ -50,7 +56,7 @@
  
          float4 frag(void) : COLOR 
          {
-            return float4(0.0, 1.0, 0.0, 0.3);
+            return float4(0.0, 0.0, 0.0, 0.3);
                // the fourth component (alpha) is important: 
                // this is semitransparent green
          }
