@@ -1,67 +1,38 @@
-﻿Shader "Glass Shader" {
-
-Properties {
-	_MainTex ("Color (RGB) Alpha (A)", 2D) = "white"
-	_Cube ("Cubemap", CUBE) = "" {}
+﻿Shader "Glass Reflective" {
+	Properties {
+		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
+		_Shininess ("Shininess", Range (0.01, 1)) = 0.078125
+		_ReflectColor ("Reflection Color", Color) = (1,1,1,0.5)
+		_Cube ("Reflection Cubemap", Cube) = "black" { TexGen CubeReflect }
+	}
+	SubShader {
 	
-
-	}	
-   SubShader {
-      Tags { "Queue" = "Transparent" } 
-         // draw after all opaque geometry has been drawn
-      Pass {
-      
-         Cull Front // first pass renders only back faces 
-             // (the "inside")
-         ZWrite Off // don't write to depth buffer 
-            // in order not to occlude other objects
-         Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
- 
-         CGPROGRAM 
- 
-         #pragma vertex vert 
-         #pragma fragment frag
- 
-         float4 vert(float4 vertexPos : POSITION) : SV_POSITION 
-         {
-            return mul(UNITY_MATRIX_MVP, vertexPos);
-         }
- 
-         float4 frag(void) : COLOR 
-         {
-            return float4(0.0, 0.0, 0.0, 0.3);
-               // the fourth component (alpha) is important: 
-               // this is semitransparent red
-         }
- 
-         ENDCG  
-      }
- 
-      Pass {
-         Cull Back // second pass renders only front faces 
-             // (the "outside")
-         ZWrite Off // don't write to depth buffer 
-            // in order not to occlude other objects
-         Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
- 
-         CGPROGRAM 
- 
-         #pragma vertex vert 
-         #pragma fragment frag
- 
-         float4 vert(float4 vertexPos : POSITION) : SV_POSITION 
-         {
-            return mul(UNITY_MATRIX_MVP, vertexPos);
-         }
- 
-         float4 frag(void) : COLOR 
-         {
-            return float4(0.0, 0.0, 0.0, 0.3);
-               // the fourth component (alpha) is important: 
-               // this is semitransparent green
-         }
- 
-         ENDCG  
-      }
-   }
+	Cull Off
+	
+		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+		
+		CGPROGRAM
+			#pragma surface surf BlinnPhong decal:add nolightmap
+			
+			samplerCUBE _Cube;
+			
+			fixed4 _ReflectColor;
+			half _Shininess;
+			
+			struct Input {
+				float3 worldRefl;
+			};
+			
+			void surf (Input IN, inout SurfaceOutput o) {
+				o.Albedo = 0;
+				o.Gloss = 1;
+				o.Specular = _Shininess;
+				
+				fixed4 reflcol = texCUBE (_Cube, IN.worldRefl);
+				o.Emission = reflcol.rgb * _ReflectColor.rgb;
+				o.Alpha = reflcol.a * _ReflectColor.a;
+			}
+		ENDCG
+	}
+	FallBack "Transparent/VertexLit"
 }

@@ -3,6 +3,8 @@
 	Properties {
 		_MainTex ("Color (RGB) Alpha (A)", 2D) = "white"
 		_Cube ("Cubemap", CUBE) = "" {}
+		      _BumpMap ("Bumpmap", 2D) = "bump" {}
+
 	}
 	
 	SubShader {
