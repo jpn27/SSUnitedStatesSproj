@@ -1,4 +1,4 @@
-﻿Shader "Mirror Shader" {
+﻿Shader "Cg shader with refraction mapping" {
    Properties {
       _Cube("Reflection Map", Cube) = "" {}
    }

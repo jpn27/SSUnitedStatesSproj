@@ -1,4 +1,4 @@
-﻿Shader "Example/WorldRefl" {
+﻿Shader "Glass2" {
 
 	Properties {
 		_MainTex ("Color (RGB) Alpha (A)", 2D) = "white"
