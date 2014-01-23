@@ -1,4 +1,4 @@
-﻿Shader "Mirror Shader" {
+﻿Shader "Mirror" {
    Properties {
       _Cube("Reflection Map", Cube) = "" {}
    }
