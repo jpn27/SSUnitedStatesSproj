@@ -1,20 +1,18 @@
-﻿Shader "Mirror" {
+﻿Shader "Cg shader with reflection map" {
    Properties {
       _Cube("Reflection Map", Cube) = "" {}
    }
    SubShader {
-          Tags {"RenderType" = "Opaque" "RenderType" = "Reflective"}
-
       Pass {   
          CGPROGRAM
  
          #pragma vertex vert  
          #pragma fragment frag 
+ 
          #include "UnityCG.cginc"
  
          // User-specified uniforms
          uniform samplerCUBE _Cube;   
-         
  
          struct vertexInput {
             float4 vertex : POSITION;
@@ -45,10 +43,9 @@
  
          float4 frag(vertexOutput input) : COLOR
          {
-            float refractiveIndex = 1.5;
-            float3 refractedDir = refract(normalize(input.viewDir), 
-            	normalize(input.normalDir), 1.0 / refractiveIndex);
-            return texCUBE(_Cube, refractedDir);
+            float3 reflectedDir = 
+               reflect(input.viewDir, normalize(input.normalDir));
+            return texCUBE(_Cube, reflectedDir);
          }
  
          ENDCG

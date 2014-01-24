@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Metal Base.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mirror.shader">
     <Files>
       <File FileName="Assets\GlassShader.shader" Line="1" Column="1" />
       <File FileName="Assets\Glass2.shader" Line="1" Column="1" />
       <File FileName="Assets\Matte Shadow.shader" Line="1" Column="1" />
-      <File FileName="Assets\Mirror.shader" Line="1" Column="1" />
-      <File FileName="Assets\Mirror 1.shader" Line="7" Column="1" />
-      <File FileName="Assets\Metal Base.shader" Line="17" Column="27" />
-      <File FileName="Assets\Metal 2.shader" Line="1" Column="16" />
+      <File FileName="Assets\Metal Base.shader" Line="1" Column="1" />
+      <File FileName="Assets\Mirror.shader" Line="14" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
